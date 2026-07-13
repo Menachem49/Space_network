@@ -13,6 +13,12 @@ new_mess = Packet("hello",s1,s2)
 
 b = SpaceNetwork(level=2)
 
-attempt_transmission(new_mess,b)
+# attempt_transmission(new_mess,b)
 
 
+
+c = SpaceNetwork(level=3)
+try :
+    attempt_transmission(new_mess,c)
+except BrokenConnectionError:
+    print("Transmission failed")
