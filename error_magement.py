@@ -1,8 +1,10 @@
+from satellite import *
+import time
+
+
 class BrokenConnectionError(Exception):
     pass
 
-from satellite import *
-import time
 def attempt_transmission(new_mess,space_net):
     try :
         space_net.send(new_mess)
